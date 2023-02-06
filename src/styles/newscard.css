@@ -1,0 +1,57 @@
+.newsCard{
+    width: 49%;
+    height: 670px;
+    border: 1px solid rgba(128, 128, 128, 0.438);
+    margin-top: 40px;
+}
+.cardImage{
+    height: 350px;
+    width: 100%;
+}
+.cardTitle{
+    margin-left: 30px;
+    margin-top: 30px;
+    width: calc(100% - 60px);
+}
+#ownerImage{
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    float: left;
+    margin-right: 20px;
+}
+#blogTitle{
+    font-size: 20px;
+    font-weight: 300;
+}
+#newstitle{
+    height: 80px;
+}
+#authorName{
+    margin-left: 80px;
+    font-size: 13px;
+    font-weight: 300;
+    color: grey;
+    margin-top: 6px;
+}
+#blogContent{
+    margin-left: 30px;
+    width: calc(100% - 60px);
+    font-size: 15px;
+    line-height: 22px;
+    font-weight: 300;
+    margin-top: 20px;
+    color: unset;
+}
+.cardContent button{
+    margin-left: 30px;
+    background-color: #011640;
+    border: none;
+    height: 34px;
+    width: 120px;
+    font-size: 14px;
+    color: white;
+    border-radius: 3px;
+    margin-top: 20px;
+    cursor: pointer;
+}

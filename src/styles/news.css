@@ -1,0 +1,28 @@
+.blog-header{
+    background: url("https://elementor1.contempothemes.com/wp-content/uploads/2020/12/b-post-6-1-1536x967.jpg");
+    background-position: center;
+    background-size: cover;
+    height: 80px;
+    width: 100%;
+    color: white;
+}
+.blog-header .blog{
+    font-weight: 300;
+    font-size: 18px;
+    margin-left: 20px;
+}
+.blog-header .under-blog{
+    font-size: 12px;
+    margin-top: 4px;
+    margin-left: 20px;
+}
+.news-cards-container{
+    height: fit-content;
+    width: calc(100% - 100px);
+    margin-left: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    background-color: white;
+    margin-top: 80px;
+}

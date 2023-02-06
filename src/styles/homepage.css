@@ -1,0 +1,27 @@
+.home-intro{
+    height: 500px;
+    margin-top: 80px;
+    justify-content: space-between;
+}
+.home-intro-left{
+    float: left;
+    width: 36%;
+    padding-left: 40px;
+}
+.home-intro-right{
+    float: left;
+    width: 50%;
+    background: url("https://elementor1.contempothemes.com/wp-content/uploads/2020/12/2-1-1536x967.jpg");
+    background-position: center;
+    background-size: cover;
+    margin-right: 20px;
+}
+.home-intro p{
+    font-size: 17px;
+    font-weight: 200;
+    line-height: 28px;
+}.home-intro-left div{
+    font-weight: 300;
+    font-size: 70px;
+    color: #12264D;
+}

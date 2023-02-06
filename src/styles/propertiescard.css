@@ -1,0 +1,180 @@
+.card{
+    border: 1px solid rgb(196, 195, 195);
+    height: fit-content;
+    width: 32%;
+    margin-top: 20px;
+}
+.card-image{
+    border: none;
+    height: 270px;
+    width: 100%;
+    background: url("https://d37ukvrrv3in12.cloudfront.net/listings/2f0059e5-0c4c-4ba0-89e9-31ca11a107eb/xl/1.jpg");
+    background-position: center;
+    background-size: cover;
+}
+.card-image-top{
+    float: right;
+    width: 100%;
+    font-weight: normal;
+}
+.sale{
+    width: fit-content;
+    float: right;
+    color: white;
+    font-size: 14px;
+    padding: 4px 10px;
+    border-radius: 3px;
+    margin: 10px 8px;
+    background-color: #404040;
+}
+.after-sale{
+    width: calc(100% - 60px);
+    float: right;
+}
+.tour{
+    width: fit-content;
+    color: white;
+    padding: 6px;
+    border-radius: 3px;
+    float: right;
+    font-size: 22px;
+    background-color: #302e2e7e;
+    margin-right: 8px;
+    text-align: center;
+}
+.tour div{
+    font-size: 12px;
+}
+.card-image-bottom{
+    height: fit-content;
+    width: 100%;
+    font-size: 24px;
+    color: white;
+}
+.home{
+    height: 26px;
+    padding: 3px;
+    border-radius: 3px;
+    background-color: #404040;
+    float: left;
+    margin-top: 120px;
+    margin-left: 8px;
+}
+.plus{
+    height: 26px;
+    padding: 3px;
+    border-radius: 3px;
+    background-color: #404040;
+    float: right;
+    margin-top: 120px;
+    margin-right: 8px;
+}
+.heart{
+    height: 24px;
+    padding: 4px;
+    border-radius: 3px;
+    background-color: #404040;
+    float: right;
+    margin-top: 120px;
+    margin-right: 4px;
+}
+.card-section1{
+    border-top: 1px solid rgb(196, 195, 195);
+    padding: 0px 10px;
+    font-weight: 300;
+    color: black;
+}
+.card-section1 .key{
+    color: grey;
+    margin-top: 0;
+}
+.card-section1 .price{
+    color: #03B5C3;
+    font-size: 24px;
+    font-weight: 500;
+    margin-top: 14px;
+}
+.key-value{
+    margin-top: 4px;
+}
+.card-section1 .upper-address{
+    font-size: 15px;
+    word-spacing: 3px;
+    margin-top: 14px;
+}
+.card-section1 .lower-address{
+    font-size: 11px;
+    color: #404040;
+    margin-top: 5px;
+}
+.card-section1 .view-button{
+    border: 3px solid rgba(128, 128, 128, 0.295);
+    border-radius: 3px;
+    float: right;
+    color: #404040;
+    font-size: 12px;
+    display: flex;
+    padding: 10px 12px;
+    margin-top: 78px;
+}
+.card-section1 .view-icon{
+    color: #404040;
+    font-size: 14px;
+}
+.card-section2{
+    width: 100%;
+    height: fit-content;
+    padding-top: 10px;
+    border-top: 1px solid rgb(196, 195, 195);
+    margin-top: 24px;
+}
+.card-section2 .save{
+    float: left;
+    margin-left: 10px;
+    color: gray;
+}
+.card-section2 .duration{
+    float: right;
+    margin-right: 10px;
+    font-weight: 300;
+    font-size: 14px;
+}
+.card-section3{
+    border-top: 1px solid rgb(196, 195, 195);
+    height: fit-content;
+    width: 100%;
+    margin-top: 24px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.card-section3 .owner{
+    margin-left: 10px;
+    margin-top: 6px;
+    font-size: 13px;
+    font-weight: 300;
+}
+.card-section3 .owner-image{
+    margin-right: 10px;
+    height: 30px;
+    width: 30px;
+    border-radius: 3px;
+    background: url("https://elementor1.contempothemes.com/wp-content/uploads/2020/12/agent-7.jpg");
+    background-position: center;
+    background-size: cover;
+    border-radius: 50%;
+}
+.card-section4{
+    font-size: 12px;
+    font-weight: 300;
+    background-color: #EDEFF0;
+    border-top: 1px solid rgb(196, 195, 195);
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+.card-section4-left{
+    color: #404040;
+}
