@@ -3,6 +3,8 @@ import { IoIosArrowBack } from "react-icons/io";
 import { IoIosArrowForward } from "react-icons/io";
 import "../styles/chatstyles.css";
 import { IoIosSend } from "react-icons/io";
+import { RiMessage2Fill } from "react-icons/ri";
+import { RxCross1 } from "react-icons/rx";
 
 export const ChatSection = () => {
     return (
@@ -15,7 +17,7 @@ export const ChatSection = () => {
                     <IoIosArrowForward/>
                 </div>
             </div>
-            <div className="chat-section">
+            <div id="chat-section">
                 <div className="chat-image"></div>
                 <div className="chat-top"></div>
                 <div className="chat-input">
@@ -33,8 +35,19 @@ export const ChatSection = () => {
                     </div>
                 </div>
             </div>
-            <div id="chat-hider">
-                
+            <div id="chat-hider" onClick={()=>{
+                document.getElementById("chat-section").style.visibility = "hidden";
+                document.getElementById("chat-visualizer").style.display = "flex";
+                document.getElementById("chat-hider").style.display = "none";
+            }}>
+                <RxCross1/>
+            </div>
+            <div id="chat-visualizer" onClick={()=>{
+                document.getElementById("chat-visualizer").style.display = "none";
+                document.getElementById("chat-section").style.visibility = "visible";
+                document.getElementById("chat-hider").style.display = "flex";
+            }}>
+                <RiMessage2Fill/>
             </div>
         </div>
     )

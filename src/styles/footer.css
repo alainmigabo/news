@@ -26,3 +26,23 @@ footer{
 .footerRight:hover{
     color: grey;
 }
+#featured{
+    margin-top: 110px;
+}
+#featured #paragraph{
+    font-size: 17px;
+    font-weight: 200;
+    color: grey;
+    width: 100%;
+    text-align: center;
+    margin-top: 30px;
+    line-height: 30px;
+}
+#featured #heading{
+    margin-top: 10px;
+    width: 100%;
+    text-align: center;
+    font-size: 28px;
+    font-weight: 300;
+    color: #011640;
+}

@@ -22,16 +22,7 @@ export const Popup = () => {
                     <label>Username (use: agent)</label>
                     <input type={"text"} id='popup-username' />
                     <label>Password (use: agent)</label>
-                    <input type={"password"} id='popup-password' onChange={
-                        () =>{
-                            let password = document.getElementById("popup-password").value;
-                            if (password) {
-                                
-                            } else {
-                                
-                            }
-                        }
-                    } />
+                    <input type={"password"} id='popup-password'/>
                     <button className='popup-buttons' id='loginbutton'>LOGIN</button>
                 </form>
                 <div id='login-with-fb'>

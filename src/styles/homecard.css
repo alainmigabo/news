@@ -1,0 +1,18 @@
+#home-cards-holder .home-card{
+    margin: 0;
+    border: none;
+    min-height: 300px;
+    width: calc(100% / 3);
+    background-color: aqua;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    cursor: pointer;
+}
+.home-card:hover{
+    transition-duration: 0.3s;
+    transition-delay: 0.1s;
+    scale: 1.2;
+}

@@ -4,6 +4,7 @@
     position: fixed;
     right: 0;
     margin-top: 40vh;
+    z-index: 1;
 }
 .arrow-section{
     display: flex;
@@ -25,7 +26,7 @@
 .arrow-section #forward-arrow{
     display: none;
 }
-.chat-section{
+#chat-section{
     margin-top: 40px;
     height: fit-content;
     background-color: white;
@@ -91,5 +92,33 @@
     color: grey;
     font-size: 30px;
     float: right;
+    cursor: pointer;
+}
+#chat-visualizer{
+    display: none;
+    background-color: #011640;
+    color: white;
+    height: fit-content;
+    width: fit-content;
+    float: right;
+    margin-right: 40px;
+    margin-top: 20px;
+    font-size: 30px;
+    padding: 12px 12px 12px 12px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+#chat-hider{
+    display: flex;
+    background-color: #011640;
+    color: white;
+    height: fit-content;
+    width: fit-content;
+    float: right;
+    margin-right: 40px;
+    margin-top: 20px;
+    font-size: 30px;
+    padding: 12px;
+    border-radius: 50%;
     cursor: pointer;
 }
