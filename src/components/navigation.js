@@ -11,7 +11,7 @@ function Navigation(){
             <Link to="/"><h1>BLAIR OWENS</h1></Link>
             <ul>
                 <Link to="/OurProperties"><li>Our Properties</li></Link>
-                <Link to="/mlssearch"><li>MLS Search</li></Link>
+                <Link to="/listings"><li>MLS Search</li></Link>
                 <Link to="/communities"><li>Communities</li></Link>
                 <Link to="/news"><li>News</li></Link>
                 <Link to="/services"><li>Services</li></Link>

@@ -5,7 +5,7 @@ import {CiSearch} from "react-icons/ci";
 
 export const RichNavigation = () => {
     return(
-        <div>
+        <div id='richnavigation'>
             <Navigation/>
             <form action='/' id='additional-navigation'>
                 <div id='search-container'>

@@ -9,6 +9,7 @@ import { MlsSearch } from "./pages/mlssearch";
 import { Services } from "./pages/services";
 import { News } from "./pages/news";
 import {More} from "./pages/moreonblog";
+import { ListingItem } from "./pages/listings";
 
 function App(){
   return(
@@ -16,7 +17,7 @@ function App(){
       <Routes>
         <Route path='/' element = {<Homepage/>} />
         <Route path='OurProperties' element = {<OurProperties/>} />
-        <Route path='mlssearch' element = {<MlsSearch/>} />
+        <Route path='listings' element = {<ListingItem/>} />
         <Route path='communities' element = {<Communities/>} />
         <Route path='services' element = {<Services/>} />
         <Route path='about' element = {<About/>} />

@@ -1,0 +1,82 @@
+#under-navigation{
+    background-color: #FFF7F1;
+    height: 70px;
+    width: 100%;
+}
+#under-navigation-left{
+    height: fit-content;
+    width: fit-content;
+    font-weight: 400;
+    font-size: 16px;
+    margin-top: 25px;
+    float: left;
+    margin-left: 25px;
+}
+#under-navigation-right{
+    float: right;
+    display: flex;
+    font-weight: 300;
+    font-size: 13px;
+    margin-top: 26px;
+    gap: 5px;
+    margin-right: 20px;
+}
+.right-links:hover{
+    color: grey;
+    cursor: pointer;
+}
+.listing-top{
+    width: calc(100% - 160px);
+    margin-left: 80px;
+    margin-top: 20px;
+    height: fit-content;
+    border: 1px solid rgba(128, 128, 128, 0.5);
+    border-radius: 3px;
+    display: flex;
+    flex-direction: column;
+}
+.listing-top #listing-top-header{
+    display: flex;
+    justify-content: space-between;
+}
+.listing-top #listing-top-header #left{
+    margin-left: 30px;
+    font-weight: 200;
+    margin-top: 50px;
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+#listing-top-header #left #left-houseName{
+    font-size: 40px;
+}
+.listing-top #listing-top-header #right{
+    margin-right: 20px;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+.listing-top #listing-top-header #right button{
+    border: none;
+    height: fit-content;
+    width: fit-content;
+    background-color: #12264D;
+    padding: 5px;
+    border-radius: 3px;
+    color: white;
+    font-size: 12px;
+    cursor: pointer;
+}
+.listing-top #listing-top-header #right #house-price{
+    font-size: 35px;
+    color: #011640;
+    font-weight: 300;
+    margin-top: 5px;
+}
+.listing-top #listing-top-header #right #payment-duration{
+    font-size: 14px;
+    margin-top: 5px;
+    font-weight: 300;
+}

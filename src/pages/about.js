@@ -5,7 +5,7 @@ import { Footer } from "../components/footer";
 
 export const About = () => {
     return (
-        <div>
+        <div id='about-page'>
             <ChatSection/>
             <RichNavigation/>
             <Footer/>
