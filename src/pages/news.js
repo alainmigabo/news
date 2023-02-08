@@ -40,12 +40,12 @@ export const News = () => {
                         if(element.content?.length > 350) {
                             newcontent = element.content.slice(0,340)
                             return(
-                                <NewsCard title={element.title} author={element.source.name} authorImage={"https://elementor1.contempothemes.com/wp-content/uploads/2020/12/riley-profile.jpg"} houseImage={element.urlToImage} content={newcontent + "[...]"}/>
+                                <NewsCard title={element.title} author={element.source.name} authorImage={"https://elementor1.contempothemes.com/wp-content/uploads/2020/12/riley-profile.jpg"} houseImage={element.urlToImage} content={newcontent + "[...]"} properties={element}/>
                                 );
                         }
                         else {
                             return(
-                                <NewsCard title={element.title} author={element.source.name} authorImage={"https://elementor1.contempothemes.com/wp-content/uploads/2020/12/riley-profile.jpg"} houseImage={element.urlToImage} content={element.content}/>
+                                <NewsCard title={element.title} author={element.source.name} authorImage={"https://elementor1.contempothemes.com/wp-content/uploads/2020/12/riley-profile.jpg"} houseImage={element.urlToImage} content={element.content} properties={element}/>
                                 );
                         }
                         

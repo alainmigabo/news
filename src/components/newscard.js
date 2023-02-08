@@ -3,9 +3,11 @@ import '../styles/newscard.css';
 import {Link} from 'react-router-dom';
 import { More } from "../pages/moreonblog";
 import '../styles/blog.css';
+// import {useDispatch} from 'react-redux';
+// import { holdArticle } from './features/newsholder/holderSlice';
 
-
-export const NewsCard = ({title,author,authorImage,content,houseImage}) => {
+export const NewsCard = ({title,author,authorImage,content,houseImage,properties}) => {
+    // const dispatch = useDispatch();
     return(
         <div className='newsCard'>
             <div className='cardImage' style={{background:`url(${houseImage})`,backgroundPosition:'center',backgroundSize:'cover'}}></div>
@@ -18,7 +20,9 @@ export const NewsCard = ({title,author,authorImage,content,houseImage}) => {
                     </div>                 
                 </div>
                 <div id='blogContent'>{content}</div>
-                <Link to="blog" element={<More/>}><button>Read More</button></Link>
+                <Link to="blog" element={<More/>}><button onClick={()=>{
+                    // dispatch(holdArticle(properties))
+                }}>Read More</button></Link>
             </div>
         </div>
     )

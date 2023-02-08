@@ -7,9 +7,10 @@ import { IoIosArrowForward } from "react-icons/io";
 import { IoIosArrowBack } from "react-icons/io";
 import {RelatedBox} from '../components/morereadcard';
 import {Footer} from '../components/footer';
+// import {useSelector} from 'react-redux';
 
 export const More = ({image,authorImage,richcontent,author}) => {
-    console.log(image,richcontent);
+    // const {article: blog} = useSelector((state)=> state.holder)
     return(
         <div>
             <RichNavigation/>
