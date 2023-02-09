@@ -116,6 +116,8 @@
     display: flex;
     padding: 10px 12px;
     margin-top: 78px;
+    background-color: transparent;
+    cursor: pointer;
 }
 .card-section1 .view-icon{
     color: #404040;

@@ -113,7 +113,7 @@
     justify-content: space-between;
 }
 #listing-rest #description-section{
-    border: 1px solid grey;
+    border: 1px solid rgba(128, 128, 128, 0.5);
     width: calc(100% - 320px);
     height: fit-content;
     margin-top: 30px;
@@ -141,13 +141,37 @@
     display: flex;
     flex-direction: column;
     gap: 20px;
+    margin-top: 10px;
 }
 #listing-rest #cards-section .card{
     width: 100%;
 }
 #description-section #inner-description #deep-description{
     margin-top: 60px;
-    font-size: 18px;
+    font-size: 16px;
     font-weight: 300;
     line-height: 25px;
+}
+#description-narrator{
+    margin-top: 30px;
+    font-weight: 300;
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+#description-narrator .key{
+    font-size: 13px;
+    margin-bottom: 2px;
+}
+.key{
+    color: grey;
+}
+#dates{
+    font-weight: 300;
+    font-size: 16px;
+    margin-bottom: 30px;
+}
+#dates div{
+    display: flex;
+    gap: 5px;
+    margin-top: 2px;
 }

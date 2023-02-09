@@ -15,9 +15,10 @@ function App(){
   return(
     <div>
       <Routes>
+        <Route path='/OurProperties/listings' element = {<ListingItem/>} />
         <Route path='/' element = {<Homepage/>} />
         <Route path='OurProperties' element = {<OurProperties/>} />
-        <Route path='listings' element = {<ListingItem/>} />
+        <Route path='mlsSearch' element = {<MlsSearch/>} />
         <Route path='communities' element = {<Communities/>} />
         <Route path='services' element = {<Services/>} />
         <Route path='about' element = {<About/>} />

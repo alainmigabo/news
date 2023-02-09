@@ -5,8 +5,10 @@ import { AiOutlineHeart } from "react-icons/ai";
 import { IoIosArrowForward } from "react-icons/io";
 import { TfiClipboard } from "react-icons/tfi";
 import '../styles/propertiescard.css';
+import { Link } from 'react-router-dom';
+import { ListingItem } from '../pages/listings';
 
-export const PropertiesCard = ({price,bedrooms,bathrooms,squareFeet,mainAddress,streetAddress,image,owner,ownerImage,duration}) =>{
+export const PropertiesCard = ({price,bedrooms,bathrooms,squareFeet,mainAddress,streetAddress,image,owner,ownerImage,duration,properties}) =>{
     return(
         <div className="card">
             <div className="card-image">
@@ -25,10 +27,13 @@ export const PropertiesCard = ({price,bedrooms,bathrooms,squareFeet,mainAddress,
                 </div>
             </div>
             <div className='card-section1'>
-                <div className='view-button'>
+                <Link to="listings" element={<ListingItem/>}><button className='view-button' onClick={()=>{
+                    const object = JSON.stringify(properties);
+                    localStorage.setItem("cardproperties",object);
+                }}>
                     <div>VIEW</div>
                     <div className='view-icon'><IoIosArrowForward/></div>
-                </div>
+                </button></Link>
                 <div className='price'>{price}</div>
                 <div className='key-value'>
                     <span className='key'>Bed </span>{bedrooms}<span className='key'> Bath </span>{bathrooms}<span className='key'> Sq Ft </span>{squareFeet}

@@ -75,6 +75,8 @@ const cards = [{
 },
 ]
 export const OurProperties = () => {
+    const object = JSON.stringify(cards);
+    localStorage.setItem("cardsarray",object);
     return (
         <div>
             <ChatSection/>
@@ -85,7 +87,7 @@ export const OurProperties = () => {
                 {
                     cards.map((element)=>{
                         return(
-                            <PropertiesCard price={element.price} bedrooms={element.bedrooms} bathrooms={element.bathrooms} squareFeet={element.squareFeet} mainAddress={element.mainAddress} streetAddress={element.streetAddress} duration={element.duration} owner={element.owner} />
+                            <PropertiesCard price={element.price} bedrooms={element.bedrooms} bathrooms={element.bathrooms} squareFeet={element.squareFeet} mainAddress={element.mainAddress} streetAddress={element.streetAddress} duration={element.duration} owner={element.owner} properties={element} />
                         )
                     })
                 }
