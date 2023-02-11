@@ -1,12 +1,12 @@
 import {createSlice} from '@reduxjs/toolkit';
 
-const initialstate = {
+const initialState = {
     article: {},
 }
 
 export const holderSlice = createSlice({
     name: 'h',
-    initialstate,
+    initialState,
     reducers:  {
         holdArticle: (state,action)=>{
             state.article = action.payload;

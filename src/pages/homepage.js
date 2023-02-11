@@ -8,9 +8,9 @@ import { Homecard } from "../components/homecard";
 
 export const Homepage = () => {
     return (
-        <div>
+        <div id='homepage'>
             <ChatSection/>
-            <Navigation />
+            <Navigation/>
             <div className="home-intro">
                 <div className="home-intro-left">
                     <div className='home-paragraph'>Luxury Real Estate</div>

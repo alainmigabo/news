@@ -1,6 +1,9 @@
 *{
     outline: none;
 }
+#richnavigation{
+    background-color: #FFF7F1;
+}
 #additional-navigation{
     display: flex;
     padding: 10px 0px;

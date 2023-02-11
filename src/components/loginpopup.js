@@ -1,10 +1,17 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { RxCross1 } from "react-icons/rx";
 import { FaFacebook } from "react-icons/fa";
 import { AiOutlineGoogle } from "react-icons/ai";
 import "../styles/loginpopup.css";
+import { useDispatch } from 'react-redux';
+import { userLogin } from '../features/authSlice/authSlice';
+import { userRegister } from '../features/authSlice/authSlice';
 
 export const Popup = () => {
+    const [username,setUsername] = useState("");
+    const [usermail,setEmail] = useState("");
+    const [userpassword,setPassword] = useState("");
+    const dispatch = useDispatch();
     return(
         <div id='background'>
             <div id='login-popup'>
@@ -19,11 +26,21 @@ export const Popup = () => {
                     document.getElementById("create-account-popup").style.display = "flex";
                 }}>Create Your Account,</span> It takes less than a minute.</div>
                 <form id='popup-login-form' className='popup-form'>
-                    <label>Username (use: agent)</label>
-                    <input type={"text"} id='popup-username' />
+                    <label>Email (use: agent)</label>
+                    <input type={"text"} id='popup-username' onChange={(event)=>{
+                        setEmail(event.target.value);
+                    }} />
                     <label>Password (use: agent)</label>
-                    <input type={"password"} id='popup-password'/>
-                    <button className='popup-buttons' id='loginbutton'>LOGIN</button>
+                    <input type={"password"} id='popup-password' onChange={(event)=>{
+                        setPassword(event.target.value)
+                    }} />
+                    <button className='popup-buttons' id='loginbutton' onClick={(e)=>{
+                        e.preventDefault();
+                        dispatch(userLogin({
+                            email: usermail,
+                            password: userpassword,
+                        }))
+                    }} >LOGIN</button>
                 </form>
                 <div id='login-with-fb'>
                     <FaFacebook className='fb-google-icon'/>
@@ -53,9 +70,13 @@ export const Popup = () => {
                 }}>Login.</span></div>
                 <form id='popup-newbie-form' className='popup-form'>
                     <label>Username<span>*</span></label>
-                    <input type={"text"} id='newbie-username' />
+                    <input type={"text"} id='newbie-username' onChange={(event)=>{
+                        setUsername(event.target.value);
+                    }} />
                     <label>Email<span>*</span></label>
-                    <input type={"text"} id='newbie-email'/>
+                    <input type={"text"} id='newbie-email' onChange={(event)=>{
+                        setEmail(event.target.value);
+                    }} />
                     <div className='newbie-double'>
                         <div className='newbie-double-left'>
                             <label>First Name</label>
@@ -71,7 +92,9 @@ export const Popup = () => {
                     <div className='newbie-double'>
                         <div className='newbie-double-left'>
                             <label>Password<span>*</span></label>
-                            <input type={"text"} id='newbie-password' />
+                            <input type={"text"} id='newbie-password' onChange={(event)=>{
+                                setPassword(event.target.value);
+                            }} />
                         </div>
                         <div className='newbie-double-right'>
                             <label>Password again<span>*</span></label>
@@ -82,7 +105,14 @@ export const Popup = () => {
                         <input type={"checkbox"} id='accept-checkbox'  name='terms'/>
                         <label id='terms-label'>I accept the <span id='terms'>terms & Conditions</span></label>
                     </div>
-                    <button id='create-account' className='popup-buttons'>Create Account</button>
+                    <button id='create-account' className='popup-buttons' onClick={(event)=>{
+                        event.preventDefault();
+                        dispatch(userRegister({
+                            username: username,
+                            email: usermail,
+                            password: userpassword,
+                        }))
+                    }} >Create Account</button>
                 </form>
             </div>
             <div id='forgot-password-popup'>

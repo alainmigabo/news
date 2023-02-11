@@ -7,6 +7,7 @@ import { ChatSection } from "../components/chat";
 import { Footer } from "../components/footer";
 
 const cards = [{
+    id:1,
     price: "$7,800,000",
     bedrooms: 6,
     bathrooms: 13,
@@ -18,6 +19,7 @@ const cards = [{
     ownerImage: "https://elementor1.contempothemes.com/wp-content/uploads/2020/12/agent-7.jpg",
     duration: "1 YEAR AGO"
 },{
+    id:2,
     price: "$4,980,000",
     bedrooms: 9,
     bathrooms: 8,
@@ -29,6 +31,7 @@ const cards = [{
     ownerImage: "https://elementor1.contempothemes.com/wp-content/uploads/2020/12/agent-7.jpg",
     duration: "9 MONTHS AGO"
 },{
+    id:3,
     price: "$4,980,000",
     bedrooms: 9,
     bathrooms: 8,
@@ -40,6 +43,7 @@ const cards = [{
     ownerImage: "https://elementor1.contempothemes.com/wp-content/uploads/2020/12/agent-7.jpg",
     duration: "9 MONTHS AGO"
 },{
+    id:4,
     price: "$2,900,000",
     bedrooms: 6,
     bathrooms: 4,
@@ -51,6 +55,7 @@ const cards = [{
     ownerImage: "https://elementor1.contempothemes.com/wp-content/uploads/2020/12/agent-7.jpg",
     duration: "9 MONTHS AGO"
 },{
+    id:5,
     price: "$3,380,000",
     bedrooms: 5,
     bathrooms: 5,
@@ -62,6 +67,7 @@ const cards = [{
     ownerImage: "https://elementor1.contempothemes.com/wp-content/uploads/2020/12/agent-7.jpg",
     duration: "9 MONTHS AGO"
 },{
+    id:6,
     price: "$3,750,000",
     bedrooms: 4,
     bathrooms: 6,

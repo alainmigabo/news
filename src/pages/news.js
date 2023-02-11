@@ -15,7 +15,7 @@ export const News = () => {
     const getData = () => {
         axios({
             method: "GET",
-            url: "https://newsapi.org/v2/top-headlines?country=us&category=business&apiKey=302cab8a146f44a49326e279a6e77809"
+            url: "https://mashami.cyclic.app/api/auth/register"
         }).then((outcome) => {
             setNews(outcome.data.articles);
         }).catch((error) => {console.log(error);

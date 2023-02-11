@@ -7,18 +7,18 @@ import { IoIosArrowForward } from "react-icons/io";
 import { IoIosArrowBack } from "react-icons/io";
 import {RelatedBox} from '../components/morereadcard';
 import {Footer} from '../components/footer';
-// import {useSelector} from 'react-redux';
+import {useSelector} from 'react-redux';
 
 export const More = ({image,authorImage,richcontent,author}) => {
-    // const {article: blog} = useSelector((state)=> state.holder)
+    const {article: blog} = useSelector((state)=> state.holder)
     return(
         <div>
             <RichNavigation/>
-            <div className="moreImage" style={{background:`url(${image})`,backgroundPosition:'center',backgroundSize:"cover"}}>
-                <div className="moreOwner" style={{background:`url(${authorImage})`,backgroundPosition:'center',backgrondSize:'cover'}} ></div>
-                <div className='moreAddress'>{author}</div>
+            <div className="moreImage" style={{background:`url(${blog.urlToImage})`,backgroundPosition:'center',backgroundSize:"cover"}}>
+                <div className="moreOwner" style={{background:`url(${"https://elementor1.contempothemes.com/wp-content/uploads/2020/12/riley-profile.jpg"})`,backgroundPosition:'center',backgroundSize:'cover'}} ></div>
+                <div className='moreAddress'>{blog.source.name}</div>
             </div>
-            <div className='blogMessage'>{richcontent}</div>
+            <div className='blogMessage'>{blog.content}</div>
             <div className='shareSection'>
                 Share This
                 <div className='shareIcons'>
