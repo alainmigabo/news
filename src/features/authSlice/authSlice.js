@@ -1,11 +1,13 @@
 import { createSlice } from "@reduxjs/toolkit";
 import axios from "axios";
+import { Link, useNavigate } from "react-router-dom";
 
 const initialState = {
-    loginstatus: true, 
+    username: "",
+    iisuseradmin: false,
+    loginstatus: false, 
     token: "",
-    data: {},
-                                                                                                                                                
+    data: {},                                                                                                             
 }
 
 export const authSlice = createSlice({
@@ -18,6 +20,9 @@ export const authSlice = createSlice({
         },
         token: (state,action)=>{
             state.token = action.payload;
+        },
+        id: (state,action)=>{
+            state.username = action.payload;
         }
     }
 })
@@ -34,6 +39,15 @@ export const userLogin = (userdata) => (dispatch) =>{
         }
     }).then((feedback)=>{
         console.log(feedback);
+        dispatch(token(feedback.data.token));
+        localStorage.setItem("token",feedback.data.token);
+        dispatch(login(feedback.data.data));
+        dispatch(id(feedback.data.username));
+    }).catch((error)=>{
+        console.log(error.message);
+        if (error.message == "Request failed with status code 400") {
+            document.getElementById("error").style.visibility = "visible";
+        }
     })
 }
 
@@ -47,5 +61,5 @@ export const userRegister = (userdata) => (dispatch) => {
     })
 }
 
-export const {login,token} = authSlice.actions;
+export const {login,token,id} = authSlice.actions;
 export default authSlice.reducer;

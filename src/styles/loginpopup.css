@@ -56,7 +56,7 @@
     padding: 0px 16px;
 }
 .popup-buttons{
-    margin-top: 30px;
+    margin-top: 18px;
     width: 100%;
     text-align: center;
     padding: 12px 0px;
@@ -171,4 +171,11 @@
     margin-top: 20px;
     font-size: 17px;
     font-weight: 300;
+}
+#error{
+    color: #C63D2D;
+    width: 100%;
+    text-align: center;
+    font-size: 12px;
+    visibility: hidden;
 }

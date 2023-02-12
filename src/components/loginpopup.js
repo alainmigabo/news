@@ -1,17 +1,26 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { RxCross1 } from "react-icons/rx";
 import { FaFacebook } from "react-icons/fa";
 import { AiOutlineGoogle } from "react-icons/ai";
 import "../styles/loginpopup.css";
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { userLogin } from '../features/authSlice/authSlice';
 import { userRegister } from '../features/authSlice/authSlice';
+import { useNavigate } from 'react-router-dom';
 
 export const Popup = () => {
+    const loginstatus = useSelector((state)=>state.authorizer.loginstatus);
+    const userName = useSelector((state)=>state.authorizer.username)
     const [username,setUsername] = useState("");
     const [usermail,setEmail] = useState("");
     const [userpassword,setPassword] = useState("");
     const dispatch = useDispatch();
+    const navigate = useNavigate();
+    useEffect(()=>{
+        if (loginstatus && (userName === "migabo")) {
+            navigate("/dashboard")
+        }
+    },[loginstatus])
     return(
         <div id='background'>
             <div id='login-popup'>
@@ -34,6 +43,7 @@ export const Popup = () => {
                     <input type={"password"} id='popup-password' onChange={(event)=>{
                         setPassword(event.target.value)
                     }} />
+                    <div id='error'>Invalid Email or Password</div>
                     <button className='popup-buttons' id='loginbutton' onClick={(e)=>{
                         e.preventDefault();
                         dispatch(userLogin({
