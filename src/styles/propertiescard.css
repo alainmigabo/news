@@ -3,6 +3,11 @@
     height: fit-content;
     width: 32%;
     margin-top: 20px;
+    transition-duration: 0.8s;
+    cursor: pointer;
+}
+.card:hover{
+    box-shadow: 5px 5px 15px;
 }
 .card-image{
     border: none;
