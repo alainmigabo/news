@@ -134,7 +134,7 @@ export const Dashboard = ()=>{
                     </div>
                 </div>
             </div>
-            <div style={{height:"100vh",width:"80%",marginLeft:"20%",backgroundColor:"#F5F7FB"}}>
+            <div style={{height:"100%",width:"80%",marginLeft:"20%",backgroundColor:"#F5F7FB"}}>
                 <div id="dashboard-top">
                     <div id="dashboard-top1">
                         
