@@ -15,12 +15,14 @@ import { Dashboard } from "./pages/dashboard";
 import { useNavigate } from "react-router-dom";
 import { NavLink } from "react-router-dom";
 import { useEffect } from "react";
+import { GeneralDashboard } from "./pages/realdashboard";
 
 function App() {
   return (
     <div>
       <Routes>
         <Route path="/dashboard" element={<Dashboard />}>
+          <Route path="/dashboard/dashboard1" element={<GeneralDashboard/>}/>
           <Route path="/dashboard/OurProperties/listings" element={<ListingItem />} />
           <Route path="/dashboard/homepage" element={<Homepage />} />
           <Route path="/dashboard/OurProperties" element={<OurProperties />} />

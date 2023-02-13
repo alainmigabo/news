@@ -2,22 +2,30 @@ import React, { useEffect } from "react";
 import '../styles/dashboard.css';
 import {FiSearch} from 'react-icons/fi';
 import {RxCross2} from 'react-icons/rx';
-import { NavLink, Outlet, useNavigate } from "react-router-dom";
+import { Link, NavLink, Outlet, useNavigate } from "react-router-dom";
 import {IoIosNotificationsOutline} from 'react-icons/io';
 import {AiOutlinePlus} from 'react-icons/ai';
 import {TfiWorld} from 'react-icons/tfi';
+import {AiOutlineDashboard} from 'react-icons/ai';
+import {RiAccountCircleLine} from 'react-icons/ri';
+import {RiMessage2Line} from 'react-icons/ri';
+import {TiGroupOutline} from 'react-icons/ti';
+import {CiViewList} from 'react-icons/ci';
+import {BsCalendar2Check} from 'react-icons/bs';
+import {TbMessages} from 'react-icons/tb';
+import {AiOutlineFileAdd} from 'react-icons/ai';
 
 export const Dashboard = ()=>{
     const navigate = useNavigate();
     useEffect(()=>{
         navigate("/dashboard/news")
-    })
+    },[])
     return (
         <div id="dashboard">
             <div id="dashboard-top-navigation">
-                <div id="logo">
+                <NavLink to="/dashboard/homepage"> <div id="logo">
                     Blair Owens
-                </div>
+                </div></NavLink>
                 <div id="search-options">
                     <button id="search-hider" onClick={()=>{
                         document.getElementById("search-opener").style.display = "flex";
@@ -37,7 +45,7 @@ export const Dashboard = ()=>{
                     </button>
                 </div>
                 <div id="top-navlinks">
-                    <NavLink to="/dashboard/OurPropertides">Our Properties</NavLink>
+                    <NavLink to="/dashboard/OurProperties">Our Properties</NavLink>
                     <NavLink to="/dashboard/mlsSearch">MLS Search</NavLink>
                     <NavLink to="/dashboard/communities">Communities</NavLink>
                     <NavLink to="/dashboard/news">News</NavLink>
@@ -61,9 +69,72 @@ export const Dashboard = ()=>{
                 </div>
             </div>
             <div id="dashboard-left-navigation">
-
+                <div id="dashboard-main-links">
+                    <div className="main-title">
+                        MAIN
+                    </div>
+                    <NavLink to={"/dashboard/dashboard1"}>
+                        <div className="dashboard-left-navigation-links">
+                            <div className="dashboard-icons">
+                                <AiOutlineDashboard style={{color: "#3270FC"}} />
+                                <span>Dashboard</span>
+                            </div>
+                        </div>
+                    </NavLink>
+                    <div className="dashboard-left-navigation-links">
+                        <div className="dashboard-icons">
+                            <RiAccountCircleLine style={{color: "#3270FC"}} />
+                            <span>Edit Profile</span>
+                        </div>
+                    </div>
+                    <div className="dashboard-left-navigation-links">
+                        <div className="dashboard-icons">
+                            <RiMessage2Line style={{color: "#3270FC"}} />
+                            <span>Messages</span>
+                        </div>
+                    </div>
+                    <div className="dashboard-left-navigation-links">
+                        <div className="dashboard-icons">
+                            <TiGroupOutline style={{color: "#3270FC"}} />
+                            <span>Agents List</span>
+                        </div>
+                    </div>
+                    <div className="dashboard-left-navigation-links">
+                        <div className="dashboard-icons">
+                            <AiOutlinePlus style={{color: "#3270FC"}} />
+                            <span>Submenu</span>
+                        </div>
+                    </div>
+                    <div className="main-title">
+                        LISTINGS
+                    </div>
+                    <div className="dashboard-left-navigation-links">
+                        <div className="dashboard-icons">
+                            <CiViewList style={{color: "#3270FC"}} />
+                            <span>My Listings</span>
+                        </div>
+                    </div>
+                    <div className="dashboard-left-navigation-links">
+                        <div className="dashboard-icons">
+                            <BsCalendar2Check style={{color: "#3270FC"}} />
+                            <span>Bookings</span>
+                        </div>
+                    </div>
+                    <div className="dashboard-left-navigation-links">
+                        <div className="dashboard-icons">
+                            <TbMessages style={{color: "#3270FC"}} />
+                            <span>Reviews</span>
+                        </div>
+                    </div>
+                    <div className="dashboard-left-navigation-links">
+                        <div className="dashboard-icons">
+                            <AiOutlineFileAdd style={{color: "#3270FC"}} />
+                            <span>Add New</span>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div style={{height:"100vh",width:"80%",marginLeft:"20%"}}>
+            <div style={{height:"100vh",width:"80%",marginLeft:"20%",backgroundColor:"#F5F7FB"}}>
                 <div id="dashboard-top">
                     <div id="dashboard-top1">
                         

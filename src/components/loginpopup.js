@@ -134,6 +134,7 @@ export const Popup = () => {
                             document.getElementById("successful-login").style.display = "flex";
                             document.getElementById("account-creation-login").innerHTML = "Created Account";
                         }
+                        
                     }} >Create Account</button>
                 </form>
             </div>
