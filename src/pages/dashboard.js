@@ -64,6 +64,14 @@ export const Dashboard = ()=>{
 
             </div>
             <div style={{height:"100vh",width:"80%",marginLeft:"20%"}}>
+                <div id="dashboard-top">
+                    <div id="dashboard-top1">
+                        
+                    </div>
+                    <div id="dashboard-top2">
+                        
+                    </div>
+                </div>
                 <Outlet/>
             </div>
         </div>

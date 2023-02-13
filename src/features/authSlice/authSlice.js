@@ -4,8 +4,9 @@ import { Link, useNavigate } from "react-router-dom";
 
 const initialState = {
     username: "",
-    iisuseradmin: false,
+    isuseradmin: false,
     loginstatus: false, 
+    usercreated: false,
     token: "",
     data: {},                                                                                                             
 }
@@ -23,6 +24,9 @@ export const authSlice = createSlice({
         },
         id: (state,action)=>{
             state.username = action.payload;
+        },
+        createUser: (state)=>{
+            state.usercreated = true;
         }
     }
 })
@@ -58,8 +62,9 @@ export const userRegister = (userdata) => (dispatch) => {
         data: userdata,
     }).then((feedback)=>{
         console.log(feedback);
+        dispatch(createUser())
     })
 }
 
-export const {login,token,id} = authSlice.actions;
+export const {login,token,id,createUser} = authSlice.actions;
 export default authSlice.reducer;

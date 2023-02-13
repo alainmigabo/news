@@ -20,7 +20,7 @@ export const NewsCard = ({title,author,authorImage,content,houseImage,properties
                     </div>                 
                 </div>
                 <div id='blogContent'>{content}</div>
-                <Link to="blog" element={<More/>}><button onClick={()=>{
+                <Link to="/dashboard/news/blog" element={<More/>}><button onClick={()=>{
                     dispatch(holdArticle(properties))
                 }}>Read More</button></Link>
             </div>
