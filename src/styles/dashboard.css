@@ -7,6 +7,9 @@
 #dashboard .blog-header{
     height: 0;
 }
+#dashboard footer{
+    display: none;
+}
 #dashboard-top-navigation{
     height: 50px;
     width: 100%;

@@ -37,12 +37,12 @@ export const Dashboard = ()=>{
                     </button>
                 </div>
                 <div id="top-navlinks">
-                    <NavLink to="/OurPropertides">Our Properties</NavLink>
-                    <NavLink to="/mlsSearch">MLS Search</NavLink>
-                    <NavLink to="/communities">Communities</NavLink>
-                    <NavLink to="/news">News</NavLink>
-                    <NavLink to="/services">Services</NavLink>
-                    <NavLink to="/about">About Blair</NavLink>
+                    <NavLink to="/dashboard/OurPropertides">Our Properties</NavLink>
+                    <NavLink to="/dashboard/mlsSearch">MLS Search</NavLink>
+                    <NavLink to="/dashboard/communities">Communities</NavLink>
+                    <NavLink to="/dashboard/news">News</NavLink>
+                    <NavLink to="/dashboard/services">Services</NavLink>
+                    <NavLink to="/dashboard/about">About Blair</NavLink>
                 </div>
                 <div id="top-navigation-boxes">
                     <div className="top-navigation-boxes"><div id="account-image"></div></div>            
