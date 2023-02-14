@@ -18,7 +18,7 @@ import {AiOutlineFileAdd} from 'react-icons/ai';
 export const Dashboard = ()=>{
     const navigate = useNavigate();
     useEffect(()=>{
-        navigate("/dashboard/news")
+        navigate("/dashboard/dashboard1")
     },[])
     return (
         <div id="dashboard">
@@ -108,12 +108,14 @@ export const Dashboard = ()=>{
                     <div className="main-title">
                         LISTINGS
                     </div>
-                    <div className="dashboard-left-navigation-links">
-                        <div className="dashboard-icons">
-                            <CiViewList style={{color: "#3270FC"}} />
-                            <span>My Listings</span>
+                    <NavLink to={"/dashboard/mylistings"}>
+                        <div className="dashboard-left-navigation-links">
+                            <div className="dashboard-icons">
+                                <CiViewList style={{color: "#3270FC"}} />
+                                <span>My Listings</span>
+                            </div>
                         </div>
-                    </div>
+                    </NavLink>
                     <div className="dashboard-left-navigation-links">
                         <div className="dashboard-icons">
                             <BsCalendar2Check style={{color: "#3270FC"}} />

@@ -6,6 +6,7 @@ import {AiOutlineHeart} from 'react-icons/ai';
 import {RxCross2} from 'react-icons/rx';
 import {TiTick} from 'react-icons/ti';
 import {AiOutlineCalendar} from 'react-icons/ai';
+import {TiMessage} from 'react-icons/ti';
 
 export const GeneralDashboard = ()=>{
     return (
@@ -92,7 +93,7 @@ export const GeneralDashboard = ()=>{
                         28 May 2022
                     </div>
                     <div className="recent-activity-icon">
-                        <TiTick/>
+                        <TiMessage/>
                     </div>
                     <div className="activity-desc">Someone left a review on <span style={{color:"#6896FD"}}>Park central</span> Listing!</div>
                 </div>
@@ -105,7 +106,7 @@ export const GeneralDashboard = ()=>{
                         28 May 2022
                     </div>
                     <div className="recent-activity-icon">
-                        <TiTick/>
+                        <AiOutlineHeart/>
                     </div>
                     <div className="activity-desc"><span style={{color:"#6896FD"}}>Fider Mamby</span> Bookmarked Your <span style={{color:"#6896FD"}}>Holiday Home</span> Listing!</div>
                 </div>
