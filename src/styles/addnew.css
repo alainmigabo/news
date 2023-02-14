@@ -80,3 +80,16 @@
 #addnew-basic-info-mainbody #option{
     cursor: pointer;
 }
+#submit-credentials-button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    width: 140px;
+    border: none;
+    color: white;
+    background-color: #12264D;
+    margin-left: calc(50% - 70px);
+    border-radius: 3px;
+    cursor: pointer;
+}
