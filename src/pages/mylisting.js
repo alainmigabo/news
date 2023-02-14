@@ -4,17 +4,21 @@ import {AiOutlinePlus} from 'react-icons/ai';
 import {IoMdArrowDropdown} from 'react-icons/io';
 import {AiOutlineSearch} from 'react-icons/ai';
 import { Listing } from "../components/listing";
+import { NavLink } from "react-router-dom";
 
 export const Mylistings = () => {
     return(
-        <div id="mylisting" style={{paddingTop:80,width:"calc(100% - 160px)",marginLeft:80}}>
+        <div id="mylisting" style={{width:"calc(100% - 160px)",marginLeft:80}}>
             <div id="mylisting-upper-section">
 
             </div>
             <div id="mylisting-under-top">
-                <div id="add-new-listing-button">
-                    Add New <AiOutlinePlus/>
-                </div>
+                <NavLink to={"/dashboard/addnew"}>
+                    <div id="add-new-listing-button">
+                        Add New 
+                        <AiOutlinePlus/>
+                    </div>
+                </NavLink>
                 <div id="sort-by">
                     <div>Sort By:</div>
                     <div id="real-sort-by">
@@ -30,7 +34,6 @@ export const Mylistings = () => {
                 </div>
             </div>
             <div id="mylistings-holder">
-                <Listing/>
                 <Listing/>
             </div>
         </div>

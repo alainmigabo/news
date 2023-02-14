@@ -3,7 +3,7 @@ import axios from "axios";
 import { Link, useNavigate } from "react-router-dom";
 
 const initialState = {
-    username: "",
+    role: "",
     isuseradmin: false,
     loginstatus: false, 
     usercreated: false,
@@ -22,8 +22,8 @@ export const authSlice = createSlice({
         token: (state,action)=>{
             state.token = action.payload;
         },
-        id: (state,action)=>{
-            state.username = action.payload;
+        role: (state,action)=>{
+            state.role = action.payload;
         },
         createUser: (state)=>{
             state.usercreated = true;
@@ -46,7 +46,7 @@ export const userLogin = (userdata) => (dispatch) =>{
         dispatch(token(feedback.data.token));
         localStorage.setItem("token",feedback.data.token);
         dispatch(login(feedback.data.data));
-        dispatch(id(feedback.data.username));
+        dispatch(role(feedback.data.role));
     }).catch((error)=>{
         console.log(error.message);
         if (error.message == "Request failed with status code 400") {
@@ -66,5 +66,5 @@ export const userRegister = (userdata) => (dispatch) => {
     })
 }
 
-export const {login,token,id,createUser} = authSlice.actions;
+export const {login,token,role,createUser} = authSlice.actions;
 export default authSlice.reducer;

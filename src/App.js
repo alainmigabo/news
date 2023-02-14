@@ -17,6 +17,7 @@ import { NavLink } from "react-router-dom";
 import { useEffect } from "react";
 import { GeneralDashboard } from "./pages/realdashboard";
 import { Mylistings } from "./pages/mylisting";
+import { AddListing } from "./pages/addnew";
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
       <Routes>
         <Route path="/dashboard" element={<Dashboard />}>
           <Route path="/dashboard/dashboard1" element={<GeneralDashboard/>}/>
+          <Route path="/dashboard/addnew" element={<AddListing/>}/>
           <Route path="/dashboard/mylistings" element={<Mylistings/>}/>
           <Route path="/dashboard/OurProperties/listings" element={<ListingItem />} />
           <Route path="/dashboard/homepage" element={<Homepage />} />

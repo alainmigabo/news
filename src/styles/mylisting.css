@@ -3,9 +3,12 @@
 }
 #add-new-listing-button{
     width: fit-content;
-    height: fit-content;
-    padding: 10px 20px;
-    font-size: 15px;
+    height: 37px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0px 20px;
+    font-size: 13px;
     float: right;
     background: linear-gradient(to right,#3C6BFD,#56C6FA);
     color: white;

@@ -11,7 +11,7 @@ import {TiTick} from 'react-icons/ti';
 
 export const Popup = () => {
     const loginstatus = useSelector((state)=>state.authorizer.loginstatus);
-    const userName = useSelector((state)=>state.authorizer.username)
+    const userRole = useSelector((state)=>state.authorizer.role)
     const {usercreated} = useSelector((state)=>state.authorizer)
     const [username,setUsername] = useState("");
     const [usermail,setEmail] = useState("");
@@ -19,10 +19,10 @@ export const Popup = () => {
     const dispatch = useDispatch();
     const navigate = useNavigate();
     useEffect(()=>{
-        if (loginstatus && (userName === "migabo")) {
+        if (loginstatus && (userRole === "admin")) {
             navigate("/dashboard")
         }
-        else if (loginstatus && (username != "migabo")) {
+        else if (loginstatus && (userRole != "admin")) {
             document.getElementById("login-popup").style.display = "none";
             document.getElementById("successful-login").style.display = "flex";
             document.getElementById("account-creation-login").innerHTML = "Logged In";

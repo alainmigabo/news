@@ -60,12 +60,14 @@ export const Dashboard = ()=>{
                     <div className="top-navigation-boxes" style={{borderRight: "1px solid rgba(128, 128, 128, 0.473)"}}><TfiWorld/></div> 
                 </div>         
                 <div id="top-navigation-addbox">
-                    <div id="add-listing-button">
-                        <div id="add-sign">
-                            <AiOutlinePlus/>
+                    <NavLink to={"/dashboard/addnew"}>
+                        <div id="add-listing-button">
+                            <div id="add-sign">
+                                <AiOutlinePlus/>
+                            </div>
+                            <div>Add Listing</div>
                         </div>
-                        <div>Add Listing</div>
-                    </div>
+                    </NavLink>
                 </div>
             </div>
             <div id="dashboard-left-navigation">
@@ -128,23 +130,17 @@ export const Dashboard = ()=>{
                             <span>Reviews</span>
                         </div>
                     </div>
-                    <div className="dashboard-left-navigation-links">
-                        <div className="dashboard-icons">
-                            <AiOutlineFileAdd style={{color: "#3270FC"}} />
-                            <span>Add New</span>
+                    <NavLink to={"/dashboard/addnew"}>
+                        <div className="dashboard-left-navigation-links">
+                            <div className="dashboard-icons">
+                                <AiOutlineFileAdd style={{color: "#3270FC"}} />
+                                <span>Add New</span>
+                            </div>
                         </div>
-                    </div>
+                    </NavLink>
                 </div>
             </div>
-            <div style={{height:"100%",width:"80%",marginLeft:"20%",backgroundColor:"#F5F7FB"}}>
-                <div id="dashboard-top">
-                    <div id="dashboard-top1">
-                        
-                    </div>
-                    <div id="dashboard-top2">
-                        
-                    </div>
-                </div>
+            <div style={{height:"100%",width:"80%",marginLeft:"20%",backgroundColor:"#F5F7FB",paddingTop:80}}>
                 <Outlet/>
             </div>
         </div>

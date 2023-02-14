@@ -10,7 +10,7 @@ import {TiMessage} from 'react-icons/ti';
 
 export const GeneralDashboard = ()=>{
     return (
-        <div style={{paddingTop:80}}>
+        <div>
             <div id="generaldashboard-under-navigation">
 
             </div>
