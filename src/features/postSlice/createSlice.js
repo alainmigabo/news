@@ -4,6 +4,7 @@ import axios from "axios";
 const initialState = {
     posted: false,
     data: [],
+    singleListing: {}
 }
 
 export const addSlice = createSlice({
@@ -15,6 +16,9 @@ export const addSlice = createSlice({
         },
         getdata: (state,action)=>{
             state.data = action.payload
+        },
+        getSingleListing: (state, action)=>{
+            state.singleListing = action.payload
         }
     }
 })
@@ -58,5 +62,15 @@ export const GetPost = () => (dispatch) =>{
     })
 }
 
-export const {getdata, post} = addSlice.actions;
+export const fetchSingleListing = (id) => (dispatch) => {
+    axios({
+        method: "GET",
+        url: `https://blog-apis-jqjw.onrender.com/api/realstate/${id}`
+    }).then((res)=>{
+        console.log(res.data)
+        dispatch(getSingleListing(res.data))
+    })
+}
+
+export const {getdata, post,getSingleListing} = addSlice.actions;
 export default addSlice.reducer;

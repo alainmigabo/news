@@ -60,6 +60,9 @@
     align-items: center;
     background-color: rgba(0, 0, 0, 0.7);
 }
+#view-popup:hover{
+    display: block;
+}
 #view-listing-details{
     color: white;
     height: fit-content;

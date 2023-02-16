@@ -88,9 +88,7 @@
 #image-container #large-image{
     width: 61%;
     height: 600px;
-    background: url("https://d37ukvrrv3in12.cloudfront.net/listings/2f0059e5-0c4c-4ba0-89e9-31ca11a107eb/xl/1.jpg");
-    background-position: center;
-    background-size: cover;
+    object-fit: cover;
 }
 #image-container #small-images{
     width: 35%;

@@ -14,12 +14,16 @@ import {CiViewList} from 'react-icons/ci';
 import {BsCalendar2Check} from 'react-icons/bs';
 import {TbMessages} from 'react-icons/tb';
 import {AiOutlineFileAdd} from 'react-icons/ai';
+import { useSelector } from "react-redux";
 
 export const Dashboard = ()=>{
     const navigate = useNavigate();
+    const {loginstatus} = useSelector((state)=>state.authorizer)
     useEffect(()=>{
-        navigate("/dashboard/dashboard1")
-    },[])
+        if (loginstatus){
+            navigate("/dashboard/dashboard1")
+        }
+    },[loginstatus])
     return (
         <div id="dashboard">
             <div id="dashboard-top-navigation">

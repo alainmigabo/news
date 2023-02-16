@@ -45,9 +45,9 @@ export const Mylistings = () => {
             </div>
             <div id="mylistings-holder">
                 {
-                    postsarray?.map((element) => {
+                    postsarray?.map((element,idx) => {
                         return (
-                            <Listing title={element.title} province={element.location.province} district={element.location.district} houseImage={element.image} />
+                            <Listing id={element._id} title={element.title} province={element.location.province} district={element.location.district} houseImage={element.image} properties={element} array={postsarray} />
                         )
                     })
                 }
