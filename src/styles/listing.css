@@ -3,12 +3,12 @@
     background-color: white;
     width: 47%;
     transition-duration: 0.5s;
+    margin-top: 10px;
 }
 #listing-card:hover{
     box-shadow: 5px 5px 10px rgba(128, 128, 128, 0.5);
 }
 #listing-card-image{
-    background: url("https://homeradar.kwst.net/images/all/1.jpg");
     background-position: center;
     background-size: cover;
     height: 150px;

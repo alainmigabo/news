@@ -16,11 +16,6 @@ export const Mylistings = () => {
     },[posted])
 
     let postsarray = useSelector((state)=>state.create.data)
-    const array = JSON.stringify(postsarray)
-    localStorage.setItem("postsarray",array)
-    postsarray = JSON.parse(localStorage.getItem("postsarray"))
-    console.log(postsarray," from my listings");
-
 
     return(
         <div id="mylisting" style={{width:"calc(100% - 160px)",marginLeft:80}}>
@@ -49,7 +44,13 @@ export const Mylistings = () => {
                 </div>
             </div>
             <div id="mylistings-holder">
-                <Listing/>
+                {
+                    postsarray?.map((element) => {
+                        return (
+                            <Listing title={element.title} province={element.location.province} district={element.location.district} houseImage={element.image} />
+                        )
+                    })
+                }
             </div>
         </div>
     )

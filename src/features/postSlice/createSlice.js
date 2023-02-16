@@ -3,7 +3,7 @@ import axios from "axios";
 
 const initialState = {
     posted: false,
-    data: {},
+    data: [],
 }
 
 export const addSlice = createSlice({

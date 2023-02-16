@@ -194,7 +194,7 @@ export const AddListing = () => {
             <button id="submit-credentials-button" onClick={(event)=>{
                 event.preventDefault();
                 console.log("clicked");
-                // dispatch(CreatePost(data));
+                dispatch(CreatePost(data));
                 dispatch(GetPost())
             }}>
                 Create Listing
