@@ -5,7 +5,7 @@ import {IoBriefcaseOutline} from 'react-icons/io5';
 import {IoMdArrowDropdown} from 'react-icons/io';
 import {IoLocationSharp} from 'react-icons/io5';
 import { useDispatch } from "react-redux";
-import { CreatePost, GetPost } from "../features/postSlice/createSlice";
+import { CreatePost } from "../features/postSlice/createSlice";
 import {TbBed} from 'react-icons/tb';
 import {FaBath} from 'react-icons/fa';
 import {BsFillPatchQuestionFill} from 'react-icons/bs';
@@ -13,6 +13,7 @@ import {FaDollarSign} from 'react-icons/fa';
 import {BsFillCalendarDateFill} from 'react-icons/bs';
 import {RiLandscapeFill} from 'react-icons/ri';
 import {MdAreaChart} from 'react-icons/md';
+import { GetPost } from "../features/postSlice/createSlice";
 
 export const AddListing = () => {
     const [listingTitle,setlistingTitle] = useState("");
@@ -193,7 +194,7 @@ export const AddListing = () => {
             <button id="submit-credentials-button" onClick={(event)=>{
                 event.preventDefault();
                 console.log("clicked");
-                // dispatch(CreatePost(data));
+                dispatch(CreatePost(data));
                 dispatch(GetPost())
             }}>
                 Create Listing

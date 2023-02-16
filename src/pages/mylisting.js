@@ -1,12 +1,27 @@
-import React from "react";
+import React, { useEffect } from "react";
 import '../styles/mylisting.css';
 import {AiOutlinePlus} from 'react-icons/ai';
 import {IoMdArrowDropdown} from 'react-icons/io';
 import {AiOutlineSearch} from 'react-icons/ai';
 import { Listing } from "../components/listing";
 import { NavLink } from "react-router-dom";
+import { GetPost } from "../features/postSlice/createSlice";
+import { useDispatch, useSelector } from "react-redux";
 
 export const Mylistings = () => {
+    const {posted} = useSelector((state)=>state.create);
+    const dispatch = useDispatch()
+    useEffect(()=>{
+        dispatch(GetPost())
+    },[posted])
+
+    const postsarray = useSelector((state)=>state.create.data)
+    const array = JSON.stringify(postsarray)
+    console.log(postsarray,"postsarray");
+    localStorage.setItem("postsarray",array)
+    console.log(postsarray," from my listings");
+
+
     return(
         <div id="mylisting" style={{width:"calc(100% - 160px)",marginLeft:80}}>
             <div id="mylisting-upper-section">

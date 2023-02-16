@@ -7,5 +7,6 @@ export const store = configureStore({
   reducer: {
     holder: holderReducer,
     authorizer: authReducer,
+    create: addReducer,
   },
 });
