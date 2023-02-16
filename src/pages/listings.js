@@ -25,14 +25,14 @@ export const ListingItem = () => {
   let tobe_displayed_array = [];
   const cardsarray = JSON.parse(localStorage.getItem("cardsarray"));
   const properties = JSON.parse(localStorage.getItem("properties"));
-  for(let i=0;i<2;i++){
-    if (cardsarray[i] == properties) {
-      i--;
+  let i=0;
+  cardsarray?.map((elt)=>{
+    if (elt._id !== properties._id) {
+      tobe_displayed_array[i] = elt;
+      i++
     }
-    else{
-      tobe_displayed_array[i] = cardsarray[i];
-    }
-  }
+  })
+  console.log(tobe_displayed_array,"here");
   return (
     <div id="more-on-listings">
       <RichNavigation />
