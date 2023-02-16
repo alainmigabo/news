@@ -45,14 +45,14 @@ export const CreatePost = (credentials) => (dispatch) =>{
     })
 }
 
-export const GetPost =()=> (dispatch) =>{
+export const GetPost = () => (dispatch) =>{
     axios({
         method: "GET",
         // url: "https://klabapi.onrender.com/api/posts",
         url: "https://blog-apis-jqjw.onrender.com/api/realstate/all",
     }).then((result)=>{
         console.log(result);
-        dispatch(getdata())
+        dispatch(getdata(result.data.realstate))
     }).catch((error)=>{
         console.log(error);
     })

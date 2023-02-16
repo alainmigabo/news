@@ -15,10 +15,10 @@ export const Mylistings = () => {
         dispatch(GetPost())
     },[posted])
 
-    const postsarray = useSelector((state)=>state.create.data)
+    let postsarray = useSelector((state)=>state.create.data)
     const array = JSON.stringify(postsarray)
-    console.log(postsarray,"postsarray");
     localStorage.setItem("postsarray",array)
+    postsarray = JSON.parse(localStorage.getItem("postsarray"))
     console.log(postsarray," from my listings");
 
 
