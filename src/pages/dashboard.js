@@ -140,7 +140,7 @@ export const Dashboard = ()=>{
                     </NavLink>
                 </div>
             </div>
-            <div style={{height:"100%",width:"80%",marginLeft:"20%",backgroundColor:"#F5F7FB",paddingTop:80}}>
+            <div style={{height:"100%",width:"80%",marginLeft:"20%",backgroundColor:"#F5F7FB",paddingTop:80}} id="outlet">
                 <Outlet/>
             </div>
         </div>

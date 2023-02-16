@@ -11,8 +11,8 @@ import {TiTick} from 'react-icons/ti';
 
 export const Popup = () => {
     const loginstatus = useSelector((state)=>state.authorizer.loginstatus);
-    const userRole = useSelector((state)=>state.authorizer.role)
-    const {usercreated} = useSelector((state)=>state.authorizer)
+    const userRole = useSelector((state)=>state.authorizer.role);
+    const {usercreated} = useSelector((state)=>state.authorizer);
     const [username,setUsername] = useState("");
     const [usermail,setEmail] = useState("");
     const [userpassword,setPassword] = useState("");

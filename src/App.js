@@ -27,7 +27,7 @@ function App() {
           <Route path="/dashboard/dashboard1" element={<GeneralDashboard/>}/>
           <Route path="/dashboard/addnew" element={<AddListing/>}/>
           <Route path="/dashboard/mylistings" element={<Mylistings/>}/>
-          <Route path="/dashboard/OurProperties/listings" element={<ListingItem />} />
+          <Route path="/dashboard/mylistings/listing-details" element={<ListingItem />} />
           <Route path="/dashboard/homepage" element={<Homepage />} />
           <Route path="/dashboard/OurProperties" element={<OurProperties />} />
           <Route path="/dashboard/mlsSearch" element={<MlsSearch />} />

@@ -2,6 +2,10 @@
     display: flex;
     background-color: white;
     width: 47%;
+    transition-duration: 0.5s;
+}
+#listing-card:hover{
+    box-shadow: 5px 5px 10px rgba(128, 128, 128, 0.5);
 }
 #listing-card-image{
     background: url("https://homeradar.kwst.net/images/all/1.jpg");
@@ -47,4 +51,25 @@
     width: calc(100% - 20px);
     margin-left: 20px;
     margin-top: 10px;
+}
+#view-popup{
+    min-height: 100%;
+    min-width: 100%;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+#view-listing-details{
+    color: white;
+    height: fit-content;
+    width: fit-content;
+    padding: 10px 20px;
+    background-color: #144273;
+    font-size: 12px;
+    cursor: pointer;
+    border-radius: 3px;
+}
+#outlet #under-navigation{
+    display: none;
 }

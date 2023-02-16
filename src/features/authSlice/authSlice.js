@@ -34,13 +34,15 @@ export const authSlice = createSlice({
 export const userLogin = (userdata) => (dispatch) =>{
     axios({
         method: "POST",
-        url: "https://mashami.cyclic.app/api/auth/login",
+        // url: "https://klabapi.onrender.com/api/auth/login",
+        url: "https://blog-apis-jqjw.onrender.com/api/auth/login",
+        // url: "https://mashami.cyclic.app/api/auth/login",
         data: userdata,
-        headers: {
-            "Access-Control-Allow-Origin": "*",
-            "Content-Type": "application/json",
-            accept: "application/json",
-        }
+        // headers: {
+        //     "Access-Control-Allow-Origin": "*",
+        //     // "Content-Type": "application/json",
+        //     // accept: "application/json",
+        // }
     }).then((feedback)=>{
         console.log(feedback);
         dispatch(token(feedback.data.token));
@@ -48,7 +50,7 @@ export const userLogin = (userdata) => (dispatch) =>{
         dispatch(login(feedback.data.data));
         dispatch(role(feedback.data.role));
     }).catch((error)=>{
-        console.log(error.message);
+        console.log(error);
         if (error.message == "Request failed with status code 400") {
             document.getElementById("error").style.visibility = "visible";
         }
@@ -58,7 +60,7 @@ export const userLogin = (userdata) => (dispatch) =>{
 export const userRegister = (userdata) => (dispatch) => {
     axios({
         method: "POST",
-        url: "https://mashami.cyclic.app/api/auth/register",
+        url: "https://blog-apis-jqjw.onrender.com/api/auth/register",
         data: userdata,
     }).then((feedback)=>{
         console.log(feedback);
