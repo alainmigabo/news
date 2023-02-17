@@ -78,7 +78,7 @@ export const fetchSingleListing = (id) => (dispatch) => {
     })
 }
 
-export const Delete = (dispatch) => {
+export const Delete = () => (dispatch) => {
     const token = (localStorage.getItem("token"));
     const id = localStorage.getItem("tobe_deleted_id")
     console.log(id);

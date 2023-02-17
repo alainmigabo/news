@@ -7,13 +7,15 @@ import { Listing } from "../components/listing";
 import { NavLink } from "react-router-dom";
 import { GetPost,Delete } from "../features/postSlice/createSlice";
 import { useDispatch, useSelector } from "react-redux";
+import { deleted } from "../features/postSlice/createSlice";
 
 export const Mylistings = () => {
   const { posted } = useSelector((state) => state.create);
+  const {deleted} = useSelector((state)=>state.create)
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(GetPost());
-  }, [posted]);
+  }, [posted,deleted]);
 
   let postsarray = useSelector((state) => state.create.data);
 
@@ -27,6 +29,7 @@ export const Mylistings = () => {
                 document.getElementById("warning-message").style.display = "none";
             }}>Cancel</div>
             <div className="approve-deletion" onClick={()=>{
+              document.getElementById("warning-message").style.display = "none";
               dispatch(Delete());
             }}>Delete</div>
           </div>
