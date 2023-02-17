@@ -79,7 +79,7 @@ export const AddListing = () => {
                     <div className="credential-title">Address ( District )</div>
                     <div className="main-credential">
                         <div className="credential-icon-input"><IoLocationSharp/></div>
-                        <input type={"text"} placeholder="Bathrooms Of Your House" className="credential-desc-input" onChange={(event)=>{
+                        <input type={"text"} placeholder="The district of your house" className="credential-desc-input" onChange={(event)=>{
                             setlistingDistrict(event.target.value);
                         }}/>
                     </div>
