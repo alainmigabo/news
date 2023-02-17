@@ -5,9 +5,14 @@ import {BsFillStarFill} from 'react-icons/bs';
 import {BsFillEyeFill} from 'react-icons/bs';
 import { NavLink } from "react-router-dom";
 import { useState } from "react";
+import {BiTrash} from 'react-icons/bi';
+import {AiOutlineEdit} from 'react-icons/ai';
+import { Delete, todelete } from "../features/postSlice/createSlice";
+import { useDispatch, useSelector } from "react-redux";
 
 export const Listing = ({title,province,district,houseImage,properties,array,id}) => {
-
+    const {tobe_deleted} =useSelector((state)=>state.create)
+    const dispatch = useDispatch();
     const [hovering, setHovering] = useState(false)
 
     return(
@@ -50,6 +55,11 @@ export const Listing = ({title,province,district,houseImage,properties,array,id}
                     <BsFillEyeFill style={{marginRight:5,color:"#3270FC"}}/>
                     <span>Viewed - 645</span>
                 </div>
+                <div className="delete-icon"><BiTrash style={{cursor:"pointer"}} onClick={()=>{
+                    document.getElementById("warning-message").style.display = "flex";
+                    localStorage.setItem("tobe_deleted_id",id)
+                }}/></div>
+                <div className="edit-icon"><AiOutlineEdit style={{cursor:"pointer"}}/></div>
             </div>
         </div>
     )

@@ -21,7 +21,7 @@ export const Dashboard = ()=>{
     const {loginstatus} = useSelector((state)=>state.authorizer)
     useEffect(()=>{
         if (loginstatus){
-            navigate("/dashboard/dashboard1")
+        navigate("/dashboard/dashboard1")
         }
     },[loginstatus])
     return (
@@ -144,7 +144,7 @@ export const Dashboard = ()=>{
                     </NavLink>
                 </div>
             </div>
-            <div style={{height:"100%",width:"80%",marginLeft:"20%",backgroundColor:"#F5F7FB",paddingTop:80}} id="outlet">
+            <div style={{height:"100%",width:"80%",marginLeft:"20%",backgroundColor:"#F5F7FB",paddingTop:52}} id="outlet">
                 <Outlet/>
             </div>
         </div>

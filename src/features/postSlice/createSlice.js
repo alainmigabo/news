@@ -4,7 +4,9 @@ import axios from "axios";
 const initialState = {
     posted: false,
     data: [],
-    singleListing: {}
+    singleListing: {},
+    tobe_deleted: "",
+    deleted: false,
 }
 
 export const addSlice = createSlice({
@@ -19,14 +21,18 @@ export const addSlice = createSlice({
         },
         getSingleListing: (state, action)=>{
             state.singleListing = action.payload
+        },
+        todelete: (state,action)=>{
+            state.tobe_deleted = action.payload
+        },
+        deleted: (state)=>{
+            state.deleted = true
         }
     }
 })
 
 export const CreatePost = (credentials) => (dispatch) =>{
     let  token = (localStorage.getItem("token"));
-    console.log(token);
-    console.log(token)
     // const idd = token.split('"')[1]
     // const userid=token._id
     // console.log(userid)
@@ -72,5 +78,21 @@ export const fetchSingleListing = (id) => (dispatch) => {
     })
 }
 
-export const {getdata, post,getSingleListing} = addSlice.actions;
+export const Delete = (dispatch) => {
+    const token = (localStorage.getItem("token"));
+    console.log(token);
+    const id = localStorage.getItem("tobe_deleted_id")
+    axios({
+        method: "DELETE",
+        url: `https://blog-apis-jqjw.onrender.com/api/realstate/delete/${id}`,
+        Authorization: `Bearer ${token}`
+    }).then((res)=>{
+        console.log(res);
+        dispatch(deleted())
+    }).catch((err)=>{
+        console.log(err);
+    })
+}
+
+export const {getdata, post,getSingleListing,deleted,todelete} = addSlice.actions;
 export default addSlice.reducer;

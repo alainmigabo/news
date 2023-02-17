@@ -76,3 +76,21 @@
 #outlet #under-navigation{
     display: none;
 }
+.delete-icon{
+    text-align: center;
+    float: left;
+    color: #144273;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    width: calc(50% - 1px);
+    border-right: 1px solid rgba(128, 128, 128, 0.2);
+}
+.edit-icon{
+    text-align: center;
+    float: left;
+    color: #144273;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    width: calc(50% - 1px);
+    border-right: 1px solid rgba(128, 128, 128, 0.2);
+}

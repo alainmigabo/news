@@ -18,6 +18,7 @@ import { useEffect } from "react";
 import { GeneralDashboard } from "./pages/realdashboard";
 import { Mylistings } from "./pages/mylisting";
 import { AddListing } from "./pages/addnew";
+import { Edit } from "./pages/editlisting";
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
       <Routes>
         <Route path="/dashboard" element={<Dashboard />}>
           <Route path="/dashboard/dashboard1" element={<GeneralDashboard/>}/>
+          <Route path="/dashboard/edit-listing" element={<Edit/>}/>
           <Route path="/dashboard/addnew" element={<AddListing/>}/>
           <Route path="/dashboard/mylistings" element={<Mylistings/>}/>
           <Route path="/dashboard/mylistings/listing-details/:userId" element={<ListingItem />} />
