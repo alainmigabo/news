@@ -109,14 +109,14 @@ export const Popup = () => {
                     <div className='newbie-double'>
                         <div className='newbie-double-left'>
                             <label>Password<span>*</span></label>
-                            <input type={"text"} id='newbie-password' onChange={(event)=>{
+                            <input type={"password"} id='newbie-password' onChange={(event)=>{
                                 setPassword(event.target.value);
                             }} />
                         </div>
-                        <div className='newbie-double-right'>
+                        {/* <div className='newbie-double-right'>
                             <label>Password again<span>*</span></label>
                             <input type={"text"} id='newbie-password-confirm'/>
-                        </div>
+                        </div> */}
                     </div>
                     <div id='acception'>
                         <input type={"checkbox"} id='accept-checkbox'  name='terms'/>

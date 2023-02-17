@@ -1,7 +1,7 @@
 #generaldashboard-under-navigation{
-    height: 100px;
+    height: 00px;
     width: calc(100% - 160px);
-    background-color: aqua;
+    background-color: transparent;
     margin-left: 80px;
     margin-bottom: 20px;
 }
@@ -52,9 +52,9 @@
     font-weight: 400;
 }
 #statistic-chart{
-    background: url("../img/cap1.png");
+    background: url("../img/img.png");
     background-position: center;
-    background-size: cover;
+    background-size: contain;
     height: 300px;
     width: 100%;
     border-radius: 3px;
