@@ -18,7 +18,7 @@ export const Mylistings = () => {
   let postsarray = useSelector((state) => state.create.data);
 
   return (
-    <div>
+    <div style={{marginTop:"-28px"}}>
       <div className="warning-container" id="warning-message">
         <div className="warning-message">
           <p>Are You Sure You Want To Delete This Post?</p>
@@ -27,7 +27,7 @@ export const Mylistings = () => {
                 document.getElementById("warning-message").style.display = "none";
             }}>Cancel</div>
             <div className="approve-deletion" onClick={()=>{
-              dispatch(Delete())
+              dispatch(Delete());
             }}>Delete</div>
           </div>
         </div>

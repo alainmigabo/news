@@ -87,6 +87,7 @@ export const Delete = (dispatch) => {
         url: `https://blog-apis-jqjw.onrender.com/api/realstate/delete/${id}`,
         Authorization: `Bearer ${token}`
     }).then((res)=>{
+        dispatch(deleted());
         console.log(res);
     }).catch((err)=>{
         console.log(err);

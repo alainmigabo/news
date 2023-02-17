@@ -51,6 +51,7 @@
     width: calc(100% - 20px);
     margin-left: 20px;
     margin-top: 10px;
+    display: flex;
 }
 #view-popup{
     min-height: 100%;

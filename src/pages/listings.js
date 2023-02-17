@@ -23,15 +23,7 @@ export const ListingItem = () => {
   },[posted])
 
   let tobe_displayed_array = [];
-  const cardsarray = JSON.parse(localStorage.getItem("cardsarray"));
   const properties = JSON.parse(localStorage.getItem("properties"));
-  let i=0;
-  cardsarray?.map((elt)=>{
-    if (elt._id !== properties._id) {
-      tobe_displayed_array[i] = elt;
-      i++
-    }
-  })
   console.log(tobe_displayed_array,"here");
   return (
     <div id="more-on-listings">
@@ -93,7 +85,7 @@ export const ListingItem = () => {
             </div>
             <div className="description-key-value">
               <div>Price per Sq Ft</div>
-              <div>${singleListing?.price/properties.SqFt}</div>
+              <div>${singleListing?.price}/{properties.SqFt}</div>
             </div>
             <div className="description-key-value">
               <div>Year Built</div>
