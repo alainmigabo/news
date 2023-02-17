@@ -80,15 +80,14 @@ export const fetchSingleListing = (id) => (dispatch) => {
 
 export const Delete = (dispatch) => {
     const token = (localStorage.getItem("token"));
-    console.log(token);
     const id = localStorage.getItem("tobe_deleted_id")
+    console.log(id);
     axios({
         method: "DELETE",
         url: `https://blog-apis-jqjw.onrender.com/api/realstate/delete/${id}`,
         Authorization: `Bearer ${token}`
     }).then((res)=>{
         console.log(res);
-        dispatch(deleted())
     }).catch((err)=>{
         console.log(err);
     })
