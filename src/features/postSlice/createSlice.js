@@ -7,6 +7,7 @@ const initialState = {
     singleListing: {},
     tobe_deleted: "",
     deleted: false,
+    done: false,
 }
 
 export const addSlice = createSlice({
@@ -27,6 +28,9 @@ export const addSlice = createSlice({
         },
         deleted: (state)=>{
             state.deleted = true
+        },
+        done: (state) =>{
+            state.done = true
         }
     }
 })
@@ -59,7 +63,9 @@ export const GetPost = () => (dispatch) =>{
         url: "https://blog-apis-jqjw.onrender.com/api/realstate/all",
     }).then((result)=>{
         dispatch(getdata(result.data.realstate))
-    })
+    }).then(
+        dispatch(done())
+    )
 }
 
 export const fetchSingleListing = (id) => (dispatch) => {
@@ -80,8 +86,10 @@ export const Delete = () => (dispatch) => {
         Authorization: `Bearer ${token}`
     }).then((res)=>{
         dispatch(deleted());
-    })
+    }).then(
+        dispatch(done())
+    )
 }
 
-export const {getdata, post,getSingleListing,deleted,todelete} = addSlice.actions;
+export const {getdata, post,getSingleListing,deleted,todelete,done} = addSlice.actions;
 export default addSlice.reducer;

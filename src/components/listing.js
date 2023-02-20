@@ -10,6 +10,7 @@ import {AiOutlineEdit} from 'react-icons/ai';
 import { Delete, todelete } from "../features/postSlice/createSlice";
 import { useDispatch, useSelector } from "react-redux";
 import {AiFillHeart} from 'react-icons/ai';
+import { Like } from "../features/like/likeSlice";
 
 export const Listing = ({title,province,district,houseImage,properties,array,id}) => {
     const {tobe_deleted} =useSelector((state)=>state.create)
@@ -65,6 +66,7 @@ export const Listing = ({title,province,district,houseImage,properties,array,id}
                     }}
                     onClick={()=>{
                         liked ? setLike(false) : setLike(true)
+                        dispatch(Like(id))
                     }}/></div><div style={{marginLeft:5}}>0</div>
                 </div>
                 <div className="delete-icon"><BiTrash style={{cursor:"pointer"}} onClick={()=>{

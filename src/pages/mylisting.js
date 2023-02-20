@@ -8,15 +8,16 @@ import { NavLink } from "react-router-dom";
 import { GetPost,Delete } from "../features/postSlice/createSlice";
 import { useDispatch, useSelector } from "react-redux";
 import { deleted } from "../features/postSlice/createSlice";
+import ReactLoading from 'react-loading'
 
-export const Mylistings = () => {
+export const Mylistings = ({type,color}) => {
   const { posted } = useSelector((state) => state.create);
-  const {deleted} = useSelector((state)=>state.create)
+  const {deleted} = useSelector((state)=>state.create);
+  const {done} = useSelector((state)=>state.create)
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(GetPost());
-  }, [posted,deleted]);
-
+  }, [posted,deleted,done]);
   let postsarray = useSelector((state) => state.create.data);
 
   return (
@@ -72,18 +73,22 @@ export const Mylistings = () => {
           </div>
         </div>
         <div id="mylistings-holder">
-          {postsarray?.map((element) => {
-            return (
-              <Listing
-                id={element._id}
-                title={element.title}
-                province={element.location.province}
-                district={element.location.district}
-                houseImage={element.image}
-                properties={element}
-              />
-            );
-          })}
+          {
+            done ? (postsarray?.map((element) => {
+              return (
+                <Listing
+                  id={element._id}
+                  title={element.title}
+                  province={element.location.province}
+                  district={element.location.district}
+                  houseImage={element.image}
+                  properties={element}
+                />
+              );
+            })) : (
+              <ReactLoading type={"bars"} color={"grey"} height={300} width={300} />
+              )
+          }
         </div>
       </div>
     </div>

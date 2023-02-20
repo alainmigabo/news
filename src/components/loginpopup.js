@@ -132,7 +132,7 @@ export const Popup = () => {
                             }));
                             document.getElementById("create-account-popup").style.display = "none";
                             document.getElementById("successful-login").style.display = "flex";
-                            document.getElementById("account-creation-login").innerHTML = "Created Account";
+                            document.getElementById("account-creation-login").innerHTML = "Created Account. Since you aren't the registered as an admin you can't navigate to Dashboard";
                         }
                         
                     }} >Create Account</button>
@@ -156,7 +156,7 @@ export const Popup = () => {
                 <div id='tick'>
                     <TiTick/>
                 </div>
-                <p>You Have Successfully<br/> <span id="account-creation-login">Logged In</span></p>
+                <p>You Have Successfully<br/> <span id="account-creation-login">Logged In. Since you aren't the registered as an admin you can't navigate to Dashboard</span></p>
                 <button id='ok-button' onClick={()=>{
                     document.getElementById("successful-login").style.display = "none";
                     document.getElementById("login-popup").style.display  = "flex";
