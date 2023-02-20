@@ -48,10 +48,7 @@ export const CreatePost = (credentials) => (dispatch) =>{
             Authorization: `Bearer ${token}`
         }
     }).then((response)=>{
-        console.log(response,"from posting");
         dispatch(post());
-    }).catch((err)=>{
-        console.log(err,"from posting")
     })
 }
 
@@ -61,10 +58,7 @@ export const GetPost = () => (dispatch) =>{
         // url: "https://klabapi.onrender.com/api/posts",
         url: "https://blog-apis-jqjw.onrender.com/api/realstate/all",
     }).then((result)=>{
-        console.log(result);
         dispatch(getdata(result.data.realstate))
-    }).catch((error)=>{
-        console.log(error);
     })
 }
 
@@ -73,7 +67,6 @@ export const fetchSingleListing = (id) => (dispatch) => {
         method: "GET",
         url: `https://blog-apis-jqjw.onrender.com/api/realstate/${id}`
     }).then((res)=>{
-        console.log(res.data)
         dispatch(getSingleListing(res.data))
     })
 }
@@ -81,16 +74,12 @@ export const fetchSingleListing = (id) => (dispatch) => {
 export const Delete = () => (dispatch) => {
     const token = (localStorage.getItem("token"));
     const id = localStorage.getItem("tobe_deleted_id")
-    console.log(id);
     axios({
         method: "DELETE",
         url: `https://blog-apis-jqjw.onrender.com/api/realstate/delete/${id}`,
         Authorization: `Bearer ${token}`
     }).then((res)=>{
         dispatch(deleted());
-        console.log(res);
-    }).catch((err)=>{
-        console.log(err);
     })
 }
 

@@ -24,7 +24,6 @@ export const ListingItem = () => {
 
   let tobe_displayed_array = [];
   const properties = JSON.parse(localStorage.getItem("properties"));
-  console.log(tobe_displayed_array,"here");
   return (
     <div id="more-on-listings">
       <RichNavigation />

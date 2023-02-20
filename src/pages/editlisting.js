@@ -212,7 +212,6 @@ export const Edit = () => {
             </div>
             <button id="submit-credentials-button" onClick={(event)=>{
                 event.preventDefault();
-                console.log("clicked");
                 dispatch(EditListing(id, token, data))
             }}>
                 Edit Listing

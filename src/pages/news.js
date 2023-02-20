@@ -18,7 +18,6 @@ export const News = () => {
             url: "https://newsapi.org/v2/top-headlines?country=us&category=business&apiKey=302cab8a146f44a49326e279a6e77809"
         }).then((outcome) => {
             setNews(outcome.data.articles);
-        }).catch((error) => {console.log(error);
         })
     }
     let newcontent;

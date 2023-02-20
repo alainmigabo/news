@@ -23,9 +23,7 @@ export const EditListing = (id, token, data) =>{
         headers:{
             Authorization: `Bearer ${token}`
         }
-    }).then((res)=>{
-        console.log(res,"from editor");
-    }).catch((err)=>{console.log(err);})
+    })
 }
 
 export const {a} = editSlice.actions;
